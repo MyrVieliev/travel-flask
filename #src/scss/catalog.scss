@@ -1,0 +1,203 @@
+// === CATALOG ===
+.catalog {
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	&__container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 10px;
+		padding-bottom: 15px;
+
+		a {
+			color: $color-black;
+		}
+
+		span {
+			padding: 0px 3px;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	&__item {
+		flex: 1 360px;
+		padding: 15px 0px 5px 0px;
+		margin: 10px 16px;
+
+		@media (min-width: 812px) {
+			max-width: 50%;
+		}
+	}
+
+	&__footer {
+		padding: 32px 0px 0px 0px;
+		text-align: center;
+	}
+
+	&__more {
+		min-width: 245px;
+
+		&._hold {
+			opacity: 0.4;
+			cursor: default;
+		}
+	}
+}
+.item-product {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border-bottom: 1px solid $color-black;
+
+	@media (any-hover: hover) {
+		&:hover {
+			.item-product__actions {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__labels {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value('right', 24, 10, 1);
+		@include adaptiv-value('top', 24, 10, 1);
+	}
+
+	&__label {
+		flex: 0 0 48px;
+		width: 48px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-family: $montserrat-Medium;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+
+		&_sale {
+			background: #e97171;
+		}
+
+		&_new {
+			background: #2ec1ac;
+		}
+	}
+
+	&__image {
+		padding: 0px 0px math.div(301px, 285px) * 100% 0px;
+	}
+
+	&__body {
+		flex: 1 1 auto;
+		padding: 16px 16px 30px 16px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		text-align: center;
+		align-self: center;
+		max-width: 90%;
+	}
+
+	&__title {
+		@include adaptiv-value('font-size', 24, 20, 1);
+		font-family: $montserrat-Bold;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 120%;
+		margin: 0px 0px math.div(8px, 24px) * 1em 0px;
+	}
+
+	&__prices {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		line-height: 150%;
+		color: $color-blue;
+		margin-bottom: 20px;
+	}
+
+	&__price {
+		@include adaptiv-value('font-size', 20, 16, 1);
+		color: $color-gray;
+		font-size: 18px;
+
+		span {
+			font-size: 20px;
+			font-family: $montserrat-Bold;
+			font-weight: 700;
+			color: $color-blue;
+			padding-left: 7px;
+		}
+
+		&_old {
+			@include adaptiv-value('font-size', 16, 14, 1);
+			font-weight: normal;
+			margin: 0px 0px 0px 16px;
+			color: #b0b0b0;
+			text-decoration: line-through;
+		}
+	}
+}
+
+.actions-product {
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__button {
+		min-width: 245px;
+		&:not(:last-child) {
+			margin: 0px 0px 24px 0px;
+		}
+		&._hold {
+			opacity: 0.2;
+			cursor: default;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		color: inherit;
+		font-family: $montserrat-Bold;
+		font-weight: 700;
+		transition: color 0.3s ease 0s;
+
+		&::before {
+			margin: 0px 10px 0px 0px;
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			color: #fff;
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+}
+// === / CATALOG ===

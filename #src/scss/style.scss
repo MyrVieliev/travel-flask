@@ -1,0 +1,124 @@
+@use 'sass:math';
+// === MIXINS ===
+@import './base/mixins';
+// === / MIXINS ===
+
+// === FONTS ===
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+@import './base/fonts';
+
+// === ICON FONTS ===
+@import './base/icons';
+// === / ICON FONTS ===
+
+// === DEFAULT FONTS ===
+$montserrat-Light: 'Montserrat-Light';
+$montserrat-Regular: 'Montserrat-Regular';
+$montserrat-Medium: 'Montserrat-Medium';
+$montserrat-Bold: 'Montserrat-Bold';
+$montserrat-Black: 'Montserrat-Black';
+$fontFamily: $montserrat-Regular;
+$fontSize: 14;
+// === / DEFAULT FONTS ===
+//=== / FONTS ===
+
+// === VARIABLES ===
+$minWidth: 320px;
+$maxWidth: 1440;
+$containerPadding: 30;
+$maxWidthContainer: 1200 + $containerPadding;
+$pc: $maxWidthContainer;
+$tablet: 991.98;
+$mobile: 767.98;
+$mobileSmall: 479.98;
+
+$color-black: #000;
+$color-gray: #4d4d4d;
+$color-blue: #1f3765;
+$color-orange: #ffa033;
+// === / VARIABLES ===
+
+// === RESET & MAIN PARAMETERS ===
+@import './base/null';
+body {
+	color: $color-black;
+	&._lock {
+		overflow: hidden;
+	}
+}
+// === / RESET & MAIN PARAMETERS ===
+
+// === WRAPPER ===
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	.loaded & {
+	}
+	> main {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}
+// === / WRAPPER ===
+
+// === CONTAINER ===
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+// === / CONTAINER ===
+
+// === FORMS & UI STYLES ===
+@import './base/forms';
+@import './base/ui';
+// === / FORMS & UI STYLES ===
+
+// === ANOTHER PAGE STYLES ===
+@import './base/swiper.scss';
+@import './base/popup';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'catalog';
+@import 'product';
+// === / ANOTHER PAGE STYLES ===
+
+// === PAGE ===
+.page {
+	flex: 1 1 auto;
+}
+
+// .parallax {
+// 	perspective: 300px;
+// 	height: 100vh;
+// 	overflow-x: hidden;
+// 	overflow-y: auto;
+
+// 	.parallax-group {
+// 		height: 100vh;
+// 		position: relative;
+// 		transform-style: preserve-3d;
+
+// 		.parallax-layer {
+// 			position: absolute;
+// 			inset: 0;
+// 		}
+// 		// scale calculation: 1 + ((Z transform value * -1) / perspective)
+// 		.base-layer {
+// 			transform: translateZ(-300px) scale(2);
+// 		}
+
+// 		.mid-layer {
+// 			transform: translateZ(0);
+// 		}
+// 		.top-layer {
+// 			transform: translateZ(210px) scale(0.3);
+// 		}
+// 	}
+// }
+// === / PAGE ===

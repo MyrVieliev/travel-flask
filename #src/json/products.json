@@ -1,0 +1,47 @@
+{
+	"products": [
+		{
+			"id": 4,
+			"url": "#",
+			"title": "The Clean Hydration Co",
+			"labels": [
+				{
+					"type": "",
+					"value": ""
+				}
+			],
+			"image": "Clean-Bottle/Black/1.jpg",
+			"price": "$16.99",
+			"priceOld": "",
+			"rating": "3",
+			"likeUrl": ""
+		},
+		{
+			"id": 5,
+			"url": "#",
+			"title": "Clean Bottle Tritan Square BPA",
+			"labels": [
+				{
+					"type": "",
+					"value": ""
+				}
+			],
+			"image": "Square/Blue/1.jpg",
+			"price": "$12.99",
+			"priceOld": "",
+			"rating": "4",
+			"likeUrl": ""
+		},
+		{
+			"id": 6,
+			"url": "#",
+			"title": "Grayl Filtration Cup",
+			"labels": "",
+			"image": "Grayl/Black/1.jpg",
+			"price": "$89.95",
+			"priceOld": "",
+			"rating": "4",
+			"likeUrl": ""
+		}
+	]
+}

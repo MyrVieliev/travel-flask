@@ -1,0 +1,194 @@
+// === FOOTER ===
+@use 'sass:math';
+
+.footer {
+	background-color: $color-gray;
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		display: grid;
+		grid-template-columns: 250px 1fr 290px;
+		@include adaptiv-value('padding-top', 80, 30, 1);
+		@include adaptiv-value('padding-bottom', 60, 30, 1);
+		@include adaptiv-value('column-gap', 80, 0, 1);
+
+		@media (max-width: ($pc+px)) {
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 290px;
+		}
+		@media (max-width: ($tablet+px)) {
+			display: block;
+		}
+	}
+	// .footer__main
+	&__main {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (max-width: ($pc+px)) {
+			grid-column: span 2;
+			@include adaptiv-value('margin-bottom', 40, 30, 1);
+		}
+	}
+	// .footer__logo
+	&__logo {
+		color: #fff;
+		margin: 0px 0px math.div(16px, 24px) * 1em 0px;
+	}
+	// .footer__text
+	&__text {
+		color: #fff;
+		line-height: 150%;
+		&:not(:last-child) {
+			margin: 0px 0px 1em 0px;
+		}
+	}
+	// .footer__contacts
+	&__contacts {
+	}
+	// .footer__menu
+	&__menu {
+		@media (max-width: ($tablet+px)) {
+			@include adaptiv-value('margin-bottom', 40, 30, 1);
+		}
+	}
+	// .footer__subscribe
+	&__subscribe {
+	}
+}
+.contacts-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	// .contacts-footer__item
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		line-height: 150%;
+		color: #fff;
+		transition: color 0.3s ease 0s;
+		&::before {
+			margin: 0px 8px 0px 0px;
+		}
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 16, 10, 1);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+}
+.menu-footer {
+	@media (min-width: ($mobile+px)) {
+		display: flex;
+	}
+	// .menu-footer__column
+	&__column {
+		@media (min-width: ($mobile+px)) {
+			flex: 0 1 33.333%;
+		}
+		@media (max-width: ($mobile+px)) {
+			@include adaptiv-value('margin-bottom', 30, 15, 1);
+		}
+	}
+	// .menu-footer__title
+	&__title {
+		color: #fff;
+		cursor: default;
+		@media (min-width: ($mobile+px)) {
+			margin: 0px 0px math.div(16px, 24px) * 1em 0px;
+		}
+		._init & {
+			display: flex;
+			width: 100%;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			align-items: center;
+			@extend ._icon-arrow-down;
+			&::before {
+				@extend %ic;
+				font-size: 12px;
+				transition: transform 0.3s ease 0s;
+			}
+		}
+		&._active {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	// .menu-footer__list
+	&__list {
+		li {
+			&:not(:last-child) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+		@media (max-width: ($mobile+px)) {
+			padding: 15px 0px 0px 0px;
+		}
+	}
+	// .menu-footer__link
+	&__link {
+		color: #fff;
+		transition: color 0.3s ease 0s;
+		line-height: 120%;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+}
+.subscribe {
+	// .subscribe__title
+	&__title {
+		margin: 0px 0px math.div(16px, 24px) * 1em 0px;
+		color: #fff;
+	}
+	// .subscribe__form
+	&__form {
+		display: flex;
+		position: relative;
+		.form__error {
+			position: absolute;
+			top: 100%;
+			margin: 3px 0px 0px 0px;
+			left: 12px;
+			color: red;
+			font-size: 12px;
+		}
+	}
+	// .subscribe__button
+	&__button {
+		flex: 0 0 45px;
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		background-color: $color-orange;
+		color: #fff;
+		transition: background-color 0.3s ease 0s;
+		margin: 0px 0px 0px 4px;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #be825c;
+			}
+		}
+	}
+	// .subscribe__input
+	&__input {
+		width: 100%;
+		padding: 0px 12px;
+		background: #f4f5f7;
+		color: #828282;
+		font-size: 14px;
+	}
+}
+
+// === / FOOTER ===

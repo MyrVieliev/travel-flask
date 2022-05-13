@@ -1,0 +1,63 @@
+// === PRODUCT ===
+.product-item {
+	&__container {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+
+	&__main {
+	}
+}
+.main-product {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	&__images {
+		flex: 0 1 700px;
+		height: 800px;
+	}
+
+	&__body {
+	}
+}
+.images-product {
+	display: grid;
+	gap: 16px;
+	grid-template-rows: 2fr 1fr;
+
+	&__slider {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__thumbs {
+	}
+}
+.thumbs-images {
+	&__swiper {
+		justify-content: space-between;
+	}
+
+	&__slide-ibg {
+		cursor: pointer;
+		opacity: 0.5;
+		transition: all 0.3s ease 0s;
+		padding-bottom: percent(177, 754);
+
+		&.swiper-slide-thumb-active {
+			opacity: 1;
+		}
+	}
+}
+
+.body-product {
+	.item-product {
+		border: none;
+	}
+
+	.item-product__image {
+		display: none;
+	}
+}
+// === / PRODUCT ===

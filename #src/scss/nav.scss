@@ -1,0 +1,179 @@
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&-wrapper {
+	}
+
+	&-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 15px;
+	}
+
+	&-logo {
+		position: relative;
+		padding: 10px 0px;
+		img {
+			height: 60px;
+			width: 60px;
+		}
+	}
+
+	&-menu {
+		display: flex;
+		align-items: center;
+		padding-right: 10px;
+		top: 20px;
+	}
+}
+
+.menu {
+	&__body {
+		flex: auto;
+
+		@media (max-width: ($mobile+px)) {
+			position: fixed;
+			width: 70%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			right: -100%;
+			background-color: #fff;
+			transition: right 0.3s ease 0s;
+			padding: 85px 15px 30px 15px;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				position: fixed;
+				width: 70%;
+				height: 50px;
+				top: 0;
+				right: -100%;
+				transition: right 0.3s ease 0s;
+				background-color: #fff;
+				z-index: 2;
+			}
+
+			&._active {
+				right: 0;
+				&::before {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&__list {
+		@media (min-width: ($mobile+px)) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 5px 15px;
+		position: relative;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		@media (max-width: ($mobile+px)) {
+			margin: 0px 0px 15px 10px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		font-family: $montserrat-Bold;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 10px 0px;
+		color: $color-main;
+
+		svg {
+			fill: $color-main;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			display: block;
+			background: none repeat scroll 0 0 transparent;
+			height: 2px;
+			width: 0;
+			background: $color-main;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		}
+
+		&:hover::after {
+			width: 100%;
+			left: 0;
+		}
+
+		@media (max-width: ($mobile+px)) {
+			font-family: $montserrat-Bold;
+			font-size: 20px;
+			font-weight: 700;
+			color: $color-main;
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: ($mobile+px)) {
+		@include adaptiv-value('margin-left', 32, 15, 1);
+		position: relative;
+		display: block;
+		flex: 0 0 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $color-main;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				background-color: $color-main;
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}

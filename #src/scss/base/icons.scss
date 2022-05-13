@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'icons';
+	font-display: swap;
+	src: url('../fonts/icons.woff') format('woff'),
+		url('../fonts/icons.woff2#icons') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: 'icons';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^='_icon-'],
+[class*=' _icon-'] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-right::after {
+	content: '\e90c';
+}
+._icon-arrow-left:before {
+	content: '\e90d';
+}
+._icon-arrow-down:before {
+	content: '\e900';
+}
+._icon-cart:before {
+	content: '\e901';
+}
+._icon-empty-star:before {
+	content: '\e902';
+}
+._icon-Facebook:before {
+	content: '\e903';
+}
+._icon-fill-star:before {
+	content: '\e904';
+}
+._icon-Instagram:before {
+	content: '\e905';
+}
+._icon-search:before {
+	content: '\e906';
+}
+._icon-Telegram:before {
+	content: '\e907';
+}
+._icon-ticket:before {
+	content: '\e908';
+}
+._icon-user:before {
+	content: '\e909';
+}
+._icon-Viber:before {
+	content: '\e90a';
+}
+._icon-Youtube:before {
+	content: '\e90b';
+}

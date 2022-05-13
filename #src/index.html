@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./html/_head.html',{ "title":"Travel flask" })
+	<body>
+		<div class="wrapper">
+			@@include('./html/_header.html',{})
+			<main class="page">
+				<div class="slider">
+					<div class="slider__container _swiper">
+						<div class="slider__slide">
+							<div class="slider__content">
+								<div class="slider__content-title">
+									SPEED <span>&</span> EASE
+								</div>
+								<div class="slider__content-subtitle">UNRIVALED</div>
+								<button class="btn btn_main slider__content-button">
+									universial <span> collection</span>
+								</button>
+							</div>
+							<div class="slider__image">
+								<img src="./img/slides/slide2.jpg" alt="Slide 2" />
+							</div>
+						</div>
+						<div class="slider__slide">
+							<div class="slider__content">
+								<div class="slider__content-title">Get great-tasting water</div>
+								<div class="slider__content-subtitle">anywhere</div>
+								<button class="btn btn_main slider__content-button">
+									<span>sale</span> -20%
+								</button>
+							</div>
+							<div class="slider__image">
+								<img src="./img/slides/slide1.jpg" alt="Slide 1" />
+							</div>
+						</div>
+						<div class="slider__slide">
+							<div class="slider__content">
+								<div class="slider__content-title">for convenient use</div>
+								<div class="slider__content-subtitle">and travelling</div>
+								<button class="btn btn_main slider__content-button">
+									universial <span> collection</span>
+								</button>
+							</div>
+							<div class="slider__image">
+								<img src="./img/slides/slide3.jpg" alt="Slide 3" />
+							</div>
+						</div>
+						<div class="slider__slide">
+							<div class="slider__content">
+								<div class="slider__content-title">
+									SPEED <span>&</span> EASE
+								</div>
+								<div class="slider__content-subtitle">UNRIVALED</div>
+								<button class="btn btn_main slider__content-button">
+									sport <span> collection</span>
+								</button>
+							</div>
+							<div class="slider__image">
+								<img src="./img/slides/slide4.jpg" alt="Slide 4" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__container _container">
+					<div class="catalog__header">
+						<div><a href="./catalog.html">Our goods</a></div>
+						<div class="form__line">
+							<label for="sortSelect">Sort:</label>
+							<select id="sortSelect" name="form[]" class="form">
+								<option value="LowToHigh" selected="selected">
+									Low to High
+								</option>
+								<option value="HighToLow">High to Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="catalog__main">
+						<article data-pid="1" class="catalog__item item-product">
+							<div class="item-product__labels"></div>
+							<a href="./product_grayl_blue.html" class="item-product__image _ibg">
+								<img src="./img/products/Grayl/Blue/1.png" alt="Grayl Filtration Cup" />
+							</a>
+							<div class="item-product__body">
+								<div class="item-product__content">
+									<div class="item-product__title">
+										Grayl Filtration Cup
+									</div>
+								</div>
+								<div class="form">
+									<div data-ajax="true" class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input
+													type="radio"
+													class="rating__item"
+													value="1"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="2"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="3"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="4"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="5"
+													name="rating"
+												/>
+											</div>
+										</div>
+										<div class="rating__disp">
+											<div class="rating__value">5</div>
+											<div class="rating__title">Ratings</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-product__prices">
+									<div class="quantity">
+										<div class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input
+												autocomplete="off"
+												type="text"
+												name="form[]"
+												value="1"
+											/>
+										</div>
+										<div class="quantity__button quantity__button_plus"></div>
+									</div>
+									<div class="item-product__price">
+										Price: <span>$89.95</span>
+									</div>
+								</div>
+								<div class="item-product__actions actions-product">
+									<div class="actions-product__body">
+										<a href="" class="actions-product__button btn btn_main"
+											>Add to cart</a
+										>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article data-pid="2" class="catalog__item item-product">
+							<div class="item-product__labels"></div>
+							<a href="./product_vapur_black.html" class="item-product__image _ibg">
+								<img src="./img/products/Vapur/Black/1.jpg" alt="Vapur Eclipse" />
+							</a>
+							<div class="item-product__body">
+								<div class="item-product__content">
+									<div class="item-product__title">
+										Vapur Eclipse
+									</div>
+								</div>
+								<div class="form">
+									<div data-ajax="true" class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input
+													type="radio"
+													class="rating__item"
+													value="1"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="2"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="3"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="4"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="5"
+													name="rating"
+												/>
+											</div>
+										</div>
+										<div class="rating__disp">
+											<div class="rating__value">4</div>
+											<div class="rating__title">Ratings</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-product__prices">
+									<div class="quantity">
+										<div class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input
+												autocomplete="off"
+												type="text"
+												name="form[]"
+												value="1"
+											/>
+										</div>
+										<div class="quantity__button quantity__button_plus"></div>
+									</div>
+									<div class="item-product__price">
+										Price: <span>$20.12</span>
+									</div>
+								</div>
+								<div class="item-product__actions actions-product">
+									<div class="actions-product__body">
+										<a href="" class="actions-product__button btn btn_main"
+											>Add to cart</a
+										>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article data-pid="3" class="catalog__item item-product">
+							<div class="item-product__labels"></div>
+							<a href="./product_takeya_white.html" class="item-product__image _ibg">
+								<img src="./img/products/Takeya/White/1.jpg" alt="Takeya Originals Vacuum" />
+							</a>
+							<div class="item-product__body">
+								<div class="item-product__content">
+									<div class="item-product__title">
+										Takeya Originals Vacuum
+									</div>
+								</div>
+								<div class="form">
+									<div data-ajax="true" class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input
+													type="radio"
+													class="rating__item"
+													value="1"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="2"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="3"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="4"
+													name="rating"
+												/>
+												<input
+													type="radio"
+													class="rating__item"
+													value="5"
+													name="rating"
+												/>
+											</div>
+										</div>
+										<div class="rating__disp">
+											<div class="rating__value">4</div>
+											<div class="rating__title">Ratings</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-product__prices">
+									<div class="quantity">
+										<div class="quantity__button quantity__button_minus"></div>
+										<div class="quantity__input">
+											<input
+												autocomplete="off"
+												type="text"
+												name="form[]"
+												value="1"
+											/>
+										</div>
+										<div class="quantity__button quantity__button_plus"></div>
+									</div>
+									<div class="item-product__price">
+										Price: <span>$34.99</span>
+									</div>
+								</div>
+								<div class="item-product__actions actions-product">
+									<div class="actions-product__body">
+										<a href="" class="actions-product__button btn btn_main"
+											>Add to cart</a
+										>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="catalog__footer">
+						<a href="" class="catalog__more btn btn_more">Show more >></a>
+					</div>
+				</div>
+			</main>
+			@@include('./html/_footer.html',{})
+		</div>
+		@@include('./html/_popup.html',{}) @@include('./html/_js.html',{})
+	</body>
+</html>
